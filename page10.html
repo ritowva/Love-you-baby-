@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Endless Love for You</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #2e003e, #4b0055, #3e1d40);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffccee;
+    }
+
+    .message {
+      max-width: 700px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      color: #ffeaf4;
+    }
+
+    .close-btn {
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      background: #ff66cc;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff99cc;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .close-btn:hover {
+      background: #ff1493;
+    }
+
+    #goodbye {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      display: none;
+      color: #ffcce6;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: pink;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: rise 3s infinite ease-in-out;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>This Is My Endless Love for You 💖</h1>
+
+  <div class="message">
+    Karishma, this website is a small world I built for you with all my heart.<br><br>
+    Every page, every word, every picture — was chosen with care, like how I want to love you every day.<br><br>
+    You are the reason this entire dream was created. My darling, my beautiful wife-to-be, I love you deeply and endlessly.<br><br>
+    Creating this took time, tears, and sleepless nights, but for you, I would do it a thousand times more.<br><br>
+    With this, I give you not just a website — I give you my heart.
+  </div>
+
+  <button class="close-btn" onclick="closeMessage()">Close the Site</button>
+
+  <p id="goodbye">
+    Thank you for being part of my dream world, my love 💕<br>
+    You can now gently close this tab and carry my love in your heart 💋
+  </p>
+
+  <!-- Music continues -->
+  <audio autoplay loop style="display: none">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Sparkles for background effect -->
+  <script>
+    function closeMessage() {
+      document.getElementById("goodbye").style.display = "block";
+    }
+
+    // Add floating sparkles
+    for (let i = 0; i < 50; i++) {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.top = Math.random() * 100 + "vh";
+      sparkle.style.animationDelay = (Math.random() * 5) + "s";
+      sparkle.style.backgroundColor = Math.random() > 0.5 ? "pink" : "white";
+      document.body.appendChild(sparkle);
+    }
+  </script>
+</body>
+</html>
