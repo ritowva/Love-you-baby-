@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Beauty, My Love</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #4e057e, #190029);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      text-shadow: 0 0 10px #ffb6f9;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .gallery-item {
+      margin: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      width: 280px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .description {
+      padding: 15px;
+      font-size: 1rem;
+      color: #ffc6e7;
+    }
+
+    .next-button {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 10px 25px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #e34ca1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Beauty, My Love</h1>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="her1.png" alt="Her Smile">
+      <div class="description">Your smile is the sunrise of my world. 🌅</div>
+    </div>
+    <div class="gallery-item">
+      <img src="her2.png" alt="Her Eyes">
+      <div class="description">Your eyes are galaxies, full of stars I want to get lost in. ✨</div>
+    </div>
+    <div class="gallery-item">
+      <img src="her3.png" alt="Her Look">
+      <div class="description">Every glance from you paints a thousand poems. 🎨</div>
+    </div>
+    <div class="gallery-item">
+      <img src="her4.png" alt="Her Heart">
+      <div class="description">You are beauty in every breath, every dream, every beat. 💗</div>
+    </div>
+  </div>
+
+  <a href="page7.html" class="next-button">Next ➡</a>
+
+</body>
+</html>
