@@ -2,35 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Page 4 – My Dream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page 4 - Dream Hug</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+    .content img {
+      max-width: 80%;
+      height: auto;
+      margin: 30px 0;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    .love-text {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      font-weight: 500;
+      color: #ffd1dc;
+    }
+    .next-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 28px;
+      background-color: #ff70a6;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+    }
+    .next-btn:hover {
+      background-color: #ff4081;
+    }
+  </style>
 </head>
-<body>
+<body class="purple-bg">
 
-  <!-- Floating Elements -->
-  <div class="floating-elements">
-    <img src="heart.png" class="heart" alt="Heart">
-    <img src="rose.png" class="rose" alt="Rose">
-  </div>
-
-  <!-- Music continues -->
-  <audio autoplay loop>
-    <source src="romantic-music.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
+  <!-- Music (already playing from Page 3, so not restarting here) -->
 
   <div class="content">
-    <h1 class="title">You Are My Dream 💖</h1>
-    <img src="hug.png" alt="Dream Hug" class="main-image" />
+    <h2>💖 Dream of Us 💖</h2>
 
-    <div class="message">
-      Baby I can see you in my dreams every day.<br />
-      You are my cutie 🥰<br />
-      My beloved, stay with me because you have my heart beats 💋.
-    </div>
+    <p class="love-text">
+      Baby I can see you in my dreams every day.<br>
+      You are my cutie 🥰<br>
+      My beloved, stay with me because you have my heartbeats 💋
+    </p>
 
-    <a href="page5.html" class="next-button">Next 💞</a>
+    <img src="dream-hug.png" alt="Dream Hug Image" />
+
+    <a href="page5.html" class="next-btn">Next</a>
   </div>
-
 </body>
 </html>
