@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposal – Will You Be Mine?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating decorations -->
+  <div class="floating-elements">
+    <img src="heart.png" class="heart" />
+    <img src="rose.png" class="rose" />
+  </div>
+
+  <!-- Music (continues from page 2, starts only if not playing) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1 class="title">Will You Be Mine Forever? 💍</h1>
+    <img src="proposal.png" alt="Proposal Scene" class="main-image" />
+    <p class="message">Baby, I want to hold your hand till eternity 💖</p>
+    <a href="page4.html" class="next-button">Next</a>
+  </div>
+
+  <!-- Music Control Script (only starts music if not already playing) -->
+  <script>
+    const audio = document.getElementById('bg-music');
+    document.addEventListener('DOMContentLoaded', () => {
+      if (audio.paused) {
+        audio.play().catch(() => {});
+      }
+    });
+  </script>
+</body>
+</html>
