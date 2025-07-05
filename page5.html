@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 5 – Our Forever</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Simple hug-dance animation */
+    .animated-hug {
+      animation: hugDance 2s infinite alternate;
+      width: 300px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    @keyframes hugDance {
+      0% { transform: translateY(0px) rotate(-2deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+      100% { transform: translateY(0px) rotate(-2deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Elements -->
+  <div class="floating-elements">
+    <img src="heart.png" class="heart" alt="Heart">
+    <img src="rose.png" class="rose" alt="Rose">
+  </div>
+
+  <!-- Background Music (continued) -->
+  <audio autoplay loop>
+    <source src="romantic-music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="content">
+    <h1 class="title">Together, Forever 💍</h1>
+
+    <!-- Hug/Dance Animation -->
+    <img src="hug-dance.png" alt="Us Dancing" class="animated-hug" />
+
+    <div class="message">
+      Our story doesn’t end here.<br />
+      You and I, hand in hand, heart in heart...<br />
+      A lifetime of love, laughter, and endless memories awaits. 💞<br /><br />
+      <b>Forever yours, RITOW 💖</b>
+    </div>
+  </div>
+
+</body>
+</html>
