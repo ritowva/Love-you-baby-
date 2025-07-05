@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Final Page – Love Forever</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #3c0063, #1a001f);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding: 60px 20px;
+      z-index: 2;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      color: #ff66cc;
+      text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff3399;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #ffe6f2;
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-size: 1.6rem;
+      font-family: 'Brush Script MT', cursive;
+      color: #ff80df;
+      text-shadow: 0 0 10px #ff66cc;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .petal {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://i.imgur.com/8fK4hOd.png'); /* heart/petal png */
+      background-size: cover;
+      animation: fall linear infinite;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<div class="container">
+  <h1>🎆 Our Forever Starts Now 🎆</h1>
+  <p>Baby, this is not just a website — it's a love story in pixels.</p>
+  <p>It took time, heart, and dreams to build this for you, Karishma.</p>
+  <p>Every part of it is my heart for you. 💕</p>
+  <p>I love you endlessly, and I will always fight for our forever. 💍</p>
+
+  <div class="signature">— From your Ritow 💌</div>
+</div>
+
+<!-- Invisible iframe for music continuation -->
+<iframe src="music.html" style="display:none;"></iframe>
+
+<script>
+// Fireworks animation using canvas
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+function createParticle(x, y, color) {
+  return {
+    x,
+    y,
+    radius: Math.random() * 2 + 1,
+    color,
+    speedX: (Math.random() - 0.5) * 5,
+    speedY: (Math.random() - 0.5) * 5,
+    life: 100
+  };
+}
+
+function explode() {
+  const x = Math.random() * canvas.width;
+  const y = Math.random() * canvas.height / 2;
+  const colors = ["#ff6699", "#ffccff", "#cc66ff", "#ff66cc"];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  for (let i = 0; i < 30; i++) {
+    particles.push(createParticle(x, y, color));
+  }
+}
+
+function animate() {
+  ctx.fillStyle = "rgba(0,0,0,0.1)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  particles.forEach((p, index) => {
+    p.x += p.speedX;
+    p.y += p.speedY;
+    p.life -= 1;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.fill();
+    if (p.life <= 0) {
+      particles.splice(index, 1);
+    }
+  });
+  requestAnimationFrame(animate);
+}
+
+setInterval(explode, 1000);
+animate();
+</script>
+
+<script>
+// Falling hearts/petals
+function createPetal() {
+  const petal = document.createElement("div");
+  petal.classList.add("petal");
+  petal.style.left = Math.random() * window.innerWidth + "px";
+  petal.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  document.body.appendChild(petal);
+  setTimeout(() => petal.remove(), 6000);
+}
+
+setInterval(createPetal, 300);
+</script>
+
+</body>
+</html>
